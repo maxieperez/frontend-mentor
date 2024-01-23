@@ -1,0 +1,262 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    /*========== Sizes ==========*/
+    --header-height: 3.5rem;
+
+    /*========== Colors ==========*/
+    --hue: 14;
+
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+
+    --text-color: #fff;
+
+    /*Gradient*/
+    --body-color: var(--red);
+    --container-color: linear-gradient(136deg, hsl(120, 1%, 15%) 0%, hsl(0, 0%, 3%) 100%);
+
+    /*========== Font and typography ==========*/
+    --body-font: "poppins", sans-serif;
+    --biggest-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 16px;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+    --mini-font-size: .55rem;
+
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-black: 900;
+
+    /*========== Margenes Bottom ==========*/
+    --mb-0-25: .25rem;
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+
+/*=============== BASE ===============*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background: var(--body-color);
+    color: var(--text-color);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button,
+input {
+    border: none;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background: none;
+}
+
+/*=============== LAYOUT ===============*/
+.wrapper{
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 1200px;
+}
+
+/*=============== MAIN ===============*/
+
+.main{
+
+    background-repeat: no-repeat;
+    background-image: url(/images/bg-intro-mobile.png);
+
+    /*=============== SECTIONS ===============*/
+
+    /* hero */
+    .hero{
+
+        margin-top: 4em;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        align-items: center;
+        justify-content: center;
+
+        &__title {
+
+            width: 80%;
+            margin: 0 auto;
+            font-size: var(--h1-font-size);
+            font-weight: 600;
+
+        }
+
+        &__text {
+
+            width: 80%;
+            margin: 0 auto;
+            font-size: var(--smaller-font-size);
+
+        }
+
+    }
+
+    /* form-container */
+    .form-container {
+
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        .tryItFree__cta {
+
+            width: 80%;
+            display: inline-block;
+            text-align: center;
+            background-color: var(--blue);
+            padding: .7rem 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 6.5px 0px rgba($color: hsl(249, 10%, 26%), $alpha: 0.2);
+            
+            button{
+
+                font-size: var(--small-font-size);
+                color: var(--text-color);
+
+            }
+
+        }
+
+        .sing-up {
+
+            width: 80%;
+            margin: 2rem auto;
+            border-radius: 10px;
+            background-color: #fff;
+            padding: 1rem 0rem;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 6.5px 0px rgba($color: hsl(249, 10%, 26%), $alpha: 0.2);
+        
+
+            form {
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                gap: 8px;
+
+            }
+            input {
+                width: 75%;
+                color: var(--dark-blue);
+                font-size: var(--smaller-font-size);
+                padding: 0.5rem 1rem;
+                border: 1px solid var(--grayish-blue);
+                border-radius: 5px;
+            }
+            button {
+
+                width: 75%;
+                margin: 1rem auto;
+                background-color: var(--green);
+                color: #fff;
+                font-size: var(--smaller-font-size);
+                padding: 0.8em 1.5em;
+                text-transform: uppercase;
+                border-radius: 5px;
+                box-shadow: 0 3px 0px rgba($color: hsl(154, 59%, 51%), $alpha: 0.5);
+
+                
+            }
+
+            p{
+                width: 70%;
+                margin: 0 auto;
+                text-align: center;
+                font-size: var(--mini-font-size);
+                color: var(--grayish-blue);
+                a{
+                    color: var(--red);
+                }
+            }
+
+        }
+
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .main{
+        
+        margin-top: 5rem;
+        display: flex;
+
+        .hero{
+
+            width: 50%;
+        }
+        .form-container{
+
+            width: 50%;
+        }
+    }
+}
+@media (min-width: 1024px) {
+
+    .main{
+
+        margin-top: 8rem;
+        display: flex;
+
+    }
+}
